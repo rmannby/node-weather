@@ -19,7 +19,8 @@ var encUriAddress = encodeURIComponent(argv.address);
 // console.log(encUriAddress);
 
 request({
-  url: 'https://maps.googleapis.com/maps/api/geocode/json?address=' + encUriAddress,
+  url: `https://maps.googleapis.com/maps/api/geocode/json?address=${encUriAddress}`,
+  //url: 'https://maps.googleapis.com/maps/api/geocode/json?address=' + encUriAddress,
   json: true
 }, (error, response, body) => {
   // console.log(JSON.stringify(body, undefined, 2));
